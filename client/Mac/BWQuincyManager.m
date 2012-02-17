@@ -82,15 +82,11 @@ const CGFloat kDetailsHeight = 285;
 }
 
 - (void)dealloc {
-	_companyName = nil;
 	_delegate = nil;
 	_submissionURL = nil;
   _appIdentifier = nil;
   
-  [_crashFile release];
-	[_quincyUI release];
 	
-	[super dealloc];
 }
 
 - (void) searchCrashLogFile:(NSString *)path {
@@ -107,7 +103,7 @@ const CGFloat kDetailsHeight = 285;
 		[filesWithModificationDate addObject:[NSDictionary dictionaryWithObjectsAndKeys:crashFile,@"name",crashLogPath,@"path",modDate,@"modDate",nil]];
 	}
 	
-	NSSortDescriptor* dateSortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"modDate" ascending:YES] autorelease];
+	NSSortDescriptor* dateSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"modDate" ascending:YES];
 	NSArray* sortedFiles = [filesWithModificationDate sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
 	
 	NSPredicate* filterPredicate = [NSPredicate predicateWithFormat:@"name BEGINSWITH %@", [self applicationName]];
@@ -120,7 +116,6 @@ const CGFloat kDetailsHeight = 285;
 #pragma mark setter
 - (void)setSubmissionURL:(NSString *)anSubmissionURL {
   if (_submissionURL != anSubmissionURL) {
-    [_submissionURL release];
     _submissionURL = [anSubmissionURL copy];
   }
   
@@ -129,7 +124,6 @@ const CGFloat kDetailsHeight = 285;
 
 - (void)setAppIdentifier:(NSString *)anAppIdentifier {    
   if (_appIdentifier != anAppIdentifier) {
-    [_appIdentifier release];
     _appIdentifier = [anAppIdentifier copy];
   }
   
@@ -349,7 +343,6 @@ const CGFloat kDetailsHeight = 285;
 			
 			[parser parse];
 			
-			[parser release];
 		}
 	}
 }
@@ -588,7 +581,6 @@ const CGFloat kDetailsHeight = 285;
 	_companyName = nil;
 	_delegate = nil;
 	
-	[super dealloc];
 }
 
 

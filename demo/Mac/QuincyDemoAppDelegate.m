@@ -55,7 +55,8 @@
 - (void)bam {
 	signal(SIGBUS, SIG_DFL);
 	
-	*(long*)0 = 0xDEADBEEF;
+	long *null = NULL;
+	*null = 0xDEADBEEF;
 }
 
 
