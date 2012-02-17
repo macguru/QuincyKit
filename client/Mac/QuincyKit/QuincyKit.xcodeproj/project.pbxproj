@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1EB614AE102B927900B206A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
 		50B9827F14EEB12500746F35 /* BWQuincyMain.nib in Resources */ = {isa = PBXBuildFile; fileRef = 50B9827814EEB12500746F35 /* BWQuincyMain.nib */; };
-		50B9828014EEB12500746F35 /* BWQuincyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B9827914EEB12500746F35 /* BWQuincyManager.h */; };
+		50B9828014EEB12500746F35 /* BWQuincyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B9827914EEB12500746F35 /* BWQuincyManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B9828114EEB12500746F35 /* BWQuincyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B9827A14EEB12500746F35 /* BWQuincyManager.m */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
